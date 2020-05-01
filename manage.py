@@ -5,7 +5,7 @@ import sys
 
 
 def main():
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'dBackend.settings')
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'massage_ify.settings')
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:
