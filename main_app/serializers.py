@@ -1,10 +1,10 @@
 from rest_framework import serializers
-from .models import Student
+from .models import Technique
 
 
-class StudentSerializer(serializers.ModelSerializer):
+class TechniqueSerializer(serializers.ModelSerializer):
 
     class Meta:
-        model = Student
-        fields = ('pk', 'name', 'email', 'document',
-                  'phone', 'registrationDate')
+        model = Technique
+        fields = ('name', 'instructions', 'image_url',
+                  'user', 'video_url')
