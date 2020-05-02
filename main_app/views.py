@@ -1,12 +1,5 @@
 from django.shortcuts import render
-
-# Create your views here.
-from django.shortcuts import render
-
-# Add the following import
-from django.http import HttpResponse
-
-# Define the home view
+from .models import Technique
 
 
 def home(request):
@@ -18,7 +11,13 @@ def about(request):
 
 
 def techniques_list(request):
-    return render(request, 'techniques/technique_index.html')
+    techniques = Technique.objects.all()
+    return render(request, 'techniques/technique_index.html', {'techniques': techniques})
+
+
+def technique_detail(request, technique_id):
+    technique = Technique.objects.get(id=technique_id)
+    return render(request, 'techniques/technique_detail.html', {'technique': technique})
 
 
 def profile(request):
