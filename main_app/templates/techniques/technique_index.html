@@ -1,3 +1,27 @@
 {% extends 'base.html' %} {% block content %}
-<p>Technique Index</p>
+<h1 class="mt-2">Techniques Index</h1>
+<div class="row p-4">
+  {% for technique in techniques %}
+  <div class="card p-1" style="width: 20rem;">
+    <img
+      src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT4NJz4ZGGF9cFt9tlyVzCZTObCA45M1Fk9mYMF5lyBqnXxSDzy&usqp=CAU"
+      class="card-img-top"
+      alt="..."
+    />
+    <div class="card-body">
+      <h5 class="card-title">{{ technique.name }}</h5>
+      <p class="card-text">{{ technique.instructions }}</p>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Cras justo odio</li>
+      <li class="list-group-item">Dapibus ac facilisis in</li>
+      <li class="list-group-item">Vestibulum at eros</li>
+    </ul>
+     <div class="card-text col-1">
+            <a href="{% url 'technique_detail' technique.id %}" class="btn btn-secondary">View</a>
+          </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
 {% endblock %}
