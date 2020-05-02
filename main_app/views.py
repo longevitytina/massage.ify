@@ -10,8 +10,16 @@ from django.http import HttpResponse
 
 
 def home(request):
-    return HttpResponse('<h1>Massage.ify Home</h1>')
+    return render(request, 'home.html')
 
 
 def about(request):
     return render(request, 'about.html')
+
+
+def techniques_list(request):
+    return render(request, 'techniques/technique_index.html')
+
+
+def profile(request):
+    return render(request, 'profile.html')
