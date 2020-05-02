@@ -3,35 +3,36 @@
     "model": "main_app.technique",
     "pk": 1,
     "fields": {
-        "name": "Kneading",
-        "description": "Circular technique where tissues are lifted, rolled and squeezed",
-        "instructions": "Instructions",
-        "image_url": "https://images.unsplash.com/photo-1519824145371-296894a0daa9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80",
-        "video_url": "https://youtu.be/ficEDr8Ufqw",
-        "user_id": 1
+      "name": "Kneading",
+      "description": "Circular technique where tissues are lifted, rolled and squeezed",
+      "instructions": "Instructions",
+      "image_url": "https://images.unsplash.com/photo-1519824145371-296894a0daa9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80",
+      "video_url": "https://youtu.be/ficEDr8Ufqw",
+      "user_id": 1
     }
   },
   {
     "model": "main_app.technique",
     "pk": 2,
     "fields": {
-        "name": "Wringing",
-        "description": "Helpful for moving toxins out of muscles",
-        "instructions": "Instructions",
-        "image_url": "https://images.unsplash.com/photo-1519824145371-296894a0daa9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80",
-        "video_url": "https://youtu.be/ficEDr8Ufqw",
-        "user_id": 1
+      "name": "Wringing",
+      "description": "Helpful for moving toxins out of muscles",
+      "instructions": "Instructions",
+      "image_url": "https://images.unsplash.com/photo-1519824145371-296894a0daa9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80",
+      "video_url": "https://youtu.be/ficEDr8Ufqw",
+      "user_id": 1
     }
   },
   {
     "model": "main_app.technique",
     "pk": 3,
     "fields": {
-        "name": "skin rolling ",
-        "description": "Used for releasing and clearing obstructions within the soft tissues.",
-        "instructions": "Instructions",
-        "image_url": "https://images.unsplash.com/photo-1514672013381-c6d0df1c8b18?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80",
-        "video_url": "https://youtu.be/v0DMq-qvp4w?t=20",
-        "user_id": 1
+      "name": "skin rolling ",
+      "description": "Used for releasing and clearing obstructions within the soft tissues.",
+      "instructions": "Instructions",
+      "image_url": "https://images.unsplash.com/photo-1514672013381-c6d0df1c8b18?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80",
+      "video_url": "https://youtu.be/v0DMq-qvp4w?t=20",
+      "user_id": 1
+    }
   }
 ]
