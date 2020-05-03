@@ -1,0 +1,9 @@
+[
+  {
+    "model": "main_app.profile",
+    "pk": 1,
+    "fields": {
+      "user_id": 1
+    }
+  }
+]
