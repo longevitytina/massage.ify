@@ -8,6 +8,8 @@ class Technique(models.Model):
     instructions = models.CharField(max_length=1000)
     image_url = models.URLField()
     video_url = models.URLField()
+    author = models.ForeignKey(
+        'Profile', default=None, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.name
