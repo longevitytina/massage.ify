@@ -2,6 +2,7 @@ from django.shortcuts import render
 from .models import *
 from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.decorators import login_required
 
 
 def home(request):
@@ -22,6 +23,7 @@ def technique_detail(request, technique_id):
     return render(request, 'techniques/technique_detail.html', {'technique': technique})
 
 
+@login_required
 def profile(request):
     return render(request, 'profile.html')
 
