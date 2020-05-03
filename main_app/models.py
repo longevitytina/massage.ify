@@ -6,16 +6,19 @@ from django.contrib.auth.models import User
 # manage.py loaddata techniques <fixturename>
 
 
+# class Profile(User):
+#     class Meta:
+#         proxy = True
+
+
 class Playlist(models.Model):
     name = models.CharField(max_length=100)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
 
+    def __str__(self):
+        return self.name
 
-def __str__(self):
-    return self.name
-
-
-def get_absolute_url(self):
+    def get_absolute_url(self):
     return reverse("index", kwargs={"pk": self.id})
 
 
@@ -53,9 +56,9 @@ class Followings(models.Model):
 
 
 class Favorites(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    user = models.ManyToManyField(User)
 
-    technique = models.ForeignKey(Technique, on_delete=models.CASCADE)
+    technique = models.ManyToManyField(Technique)
 
     def __str__(self):
         return self.name
