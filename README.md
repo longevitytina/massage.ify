@@ -19,6 +19,8 @@ Submit your own massage techniques to the community to share your knowledge!
 
 ## Getting Started
 
+Instructions go here..
+
 ## Authors
 
 - **Tina Taylor** - https://github.com/longevitytina - https://www.linkedin.com/in/tina-taylor-codes/
@@ -31,20 +33,15 @@ Submit your own massage techniques to the community to share your knowledge!
 - [Django](https://www.djangoproject.com) - The web framework used
 - [Heroku](https://www.heroku.com) - Deployment
 - [Bootstrap](https://getbootstrap.com) - Styling
+- [Bootstrap](https://getbootstrap.com) - Styling
 
 ## User Stories
 
 ##### Home Page
 
-\* \* \*
-
 ##### Profile Page
 
-\* \*
-
 ##### About Page
-
-\* \*
 
 ## Wireframes
 
@@ -52,4 +49,6 @@ Submit your own massage techniques to the community to share your knowledge!
 
 ## Future Updates
 
-\*
+## References
+
+[Django admin panel customization](https://data-flair.training/blogs/django-admin-customization/)
