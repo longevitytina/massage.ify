@@ -60,9 +60,6 @@ class Favorites(models.Model):
 
     technique = models.ManyToManyField(Technique)
 
-    def __str__(self):
-        return self.name
-
 # complete playlist with playlist_id, technique_ids, time(per technique), and order
 
 
