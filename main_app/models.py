@@ -3,7 +3,7 @@ from datetime import date
 from django.urls import reverse
 from django.contrib.auth.models import User
 # Create your models here.
-#
+# manage.py loaddata techniques <fixturename>
 
 
 class Playlist(models.Model):
