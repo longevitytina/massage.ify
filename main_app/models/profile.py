@@ -7,7 +7,7 @@ from django.contrib.auth.models import User
 
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    favorites = models.ManyToManyField(Technique)
+    favorites = models.ManyToManyField('Technique')
 
 
 @receiver(post_save, sender=User)
