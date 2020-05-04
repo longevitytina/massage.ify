@@ -1,0 +1,10 @@
+[
+  {
+    "model": "main_app.playlist",
+    "pk": 1,
+    "fields": {
+      "user_id": 1,
+      "name": "dance"
+    }
+  }
+]
