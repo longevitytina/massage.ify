@@ -25,7 +25,13 @@ def technique_detail(request, technique_id):
 
 @login_required
 def profile(request):
-    return render(request, 'profile.html')
+    # list of favorite techniques
+    # user account info
+    profile = request.user.profile
+    context = {
+        'profile': profile,
+    }
+    return render(request, 'profile.html', context)
 
 
 def signup(request):
