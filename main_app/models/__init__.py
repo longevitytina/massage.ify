@@ -1,4 +1,4 @@
-from .followings import Followings
+from .following import Following
 from .playlist import Playlist
 from .profile import Profile
 from .technique import Technique
