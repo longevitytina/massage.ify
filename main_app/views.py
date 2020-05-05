@@ -15,7 +15,12 @@ def about(request):
 
 def techniques_list(request):
     techniques = Technique.objects.all()
-    return render(request, 'techniques/technique_index.html', {'techniques': techniques})
+    profile = request.user.profile
+    context = {
+        'profile': profile,
+        'techniques': techniques
+    }
+    return render(request, 'techniques/technique_index.html', context)
 
 
 def technique_detail(request, technique_id):
@@ -27,9 +32,12 @@ def technique_detail(request, technique_id):
 def profile(request):
     # list of favorite techniques
     # user account info
+    # profile = Profile.objects.get(id=profile_id)
     profile = request.user.profile
+    user = request.user
     context = {
         'profile': profile,
+        'user': user
     }
     return render(request, 'profile.html', context)
 
@@ -48,3 +56,11 @@ def signup(request):
     form = UserCreationForm()
     context = {'form': form, 'error_message': error_message}
     return render(request, 'registration/signup.html', context)
+
+
+def assoc_technique(request, profile_id, technique_id):
+    Profile.objects.get(id=profile_id).favorites.add(technique_id)
+
+    technique = Technique.objects.get(id=technique_id)
+
+    return redirect('techniques_list')
