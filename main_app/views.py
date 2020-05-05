@@ -14,13 +14,17 @@ def about(request):
 
 
 def techniques_list(request):
-    techniques = Technique.objects.all()
-    profile = request.user.profile
-    context = {
-        'profile': profile,
-        'techniques': techniques
-    }
-    return render(request, 'techniques/technique_index.html', context)
+    if request.user.is_authenticated:
+        techniques = Technique.objects.all()
+        profile = request.user.profile
+        context = {
+            'profile': profile,
+            'techniques': techniques
+        }
+        return render(request, 'techniques/technique_index.html', context)
+    else:
+        techniques = Technique.objects.all()
+        return render(request, 'techniques/technique_index.html', {'techniques': techniques})
 
 
 def technique_detail(request, technique_id):
