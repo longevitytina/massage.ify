@@ -12,6 +12,8 @@ urlpatterns = [
     path('techniques/<int:technique_id>/detail',
          views.technique_detail, name='technique_detail'),
     path('profile/', views.profile, name='profile'),
+    path('profile/new', views.new_playlist, name='new_playlist'),
+
     path('accounts/signup', views.signup, name='signup'),
     # path('profile/<int:favorite_id>/delete/',
     #      views.delete_favorite, name='delete_favorite'),
