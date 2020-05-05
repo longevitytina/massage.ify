@@ -39,17 +39,23 @@
 
   <div class="py-4 px-4">
     <div class="d-flex align-items-center justify-content-between mb-3">
-      <h3 class="mb-0">Playlits</h5>
+      <h3 class="mb-0">Playlists</h5>
       <a href="#" class="btn btn-link text-muted">Show all</a>
     </div>
-    <a href="{% url 'new_playlist' %}" class="btn btn-primary">Add Playlist</a>
+
+      <div class="list-group">
+        {% for playlist in profile.playlist_set.all %}
+        <a href="#" class="list-group-item list-group-item-action ">{{playlist.name}}</a>
+      </div>
+      {% endfor %}
+      <a href="{% url 'new_playlist' %}" class="btn btn-primary">Add Playlist</a>
+    </div>
 
 
     <div class="d-flex align-items-center justify-content-between mb-3">
       <h3 class="mb-0">Favorites</h5>
       <a href="#" class="btn btn-link text-muted">Show all</a>
     </div>
-  </div>
     <div class="card-deck p-3">
         {% for favorite in profile.favorites.all %}
         <div class="card">
@@ -59,8 +65,8 @@
                 alt="Card image cap"
             />
             <div class="card-body">
-                    <h5 class="card-title">{{ favorite.name }}</h5>
-                    <p class="card-text">{{ favorite.description }}</p>
+                <h5 class="card-title">{{ favorite.name }}</h5>
+                <p class="card-text">{{ favorite.description }}</p>
             </div>
             <div class="card-text col-1">
                 <div class="btn-group pb-3">

@@ -39,9 +39,11 @@ def profile(request):
     # user account info
     # profile = Profile.objects.get(id=profile_id)
     profile = request.user.profile
+
     user = request.user
     context = {
         'profile': profile,
+
         'user': user
     }
     return render(request, 'profile.html', context)
