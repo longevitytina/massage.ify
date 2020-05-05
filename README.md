@@ -52,3 +52,12 @@ Instructions go here..
 ## References
 
 [Django admin panel customization](https://data-flair.training/blogs/django-admin-customization/)
+[Datamodel builder](https://www.lucidchart.com/)
+[Create super user in script](https://stackoverflow.com/questions/6244382/how-to-automate-createsuperuser-on-django)
+[Split models.py into several files](https://stackoverflow.com/questions/6336664/split-models-py-into-several-files)
+[Extra fields on many-to-many relationships](https://docs.djangoproject.com/en/dev/topics/db/models/#extra-fields-on-many-to-many-relationships)
+[Random pic generator](https://source.unsplash.com/)
+[ManyToMany convert queryset iteration ](https://stackoverflow.com/questions/45768190/typeerror-manyrelatedmanager-object-is-not-iterable)
+
+[Bootstrap profile page starter](https://bootstrapious.com/p/bootstrap-profile-page)
+[Align buttons](https://stackoverflow.com/questions/20962483/how-do-i-make-two-bootstrap-buttons-side-by-side/20962556)
