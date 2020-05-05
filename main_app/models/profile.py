@@ -8,7 +8,8 @@ from django.contrib.auth.models import User
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     favorites = models.ManyToManyField('Technique')
-    image_url = models.URLField(default='https://source.unsplash.com/random')
+    image_url = models.URLField(
+        default='https://source.unsplash.com/random/30x50')
 
     def __str__(self):
         return self.user.username
