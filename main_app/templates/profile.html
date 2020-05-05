@@ -4,19 +4,18 @@
 <div class="bg-white shadow rounded overflow-hidden">
   <div class="px-4 pt-0 pb-4 bg-dark">
     <div class="media align-items-end profile-header">
-      <div class="profile mr-3">
+      <div class="profile mr-3 pt-2">
         <img
-          src="https://d19m59y37dris4.cloudfront.net/university/1-1-1/img/teacher-4.jpg"
+          src="{{profile.image_url}}"
           alt="..."
           width="130"
+          height="200"
           class="rounded mb-2 img-thumbnail"
         /><a href="#" class="btn btn-dark btn-sm btn-block">Edit profile</a>
       </div>
       <div class="media-body mb-5 text-white">
-        <h4 class="mt-0 mb-0">Manuella Tarly</h4>
-        <p class="small mb-4">
-          <i class="fa fa-map-marker mr-2"></i>San Farcisco
-        </p>
+        <h4 class="mt-0 mb-0">{{user.username}}</h4>
+        <p class="small mb-4">location</p>
       </div>
     </div>
   </div>
@@ -26,7 +25,7 @@
       <li class="list-inline-item">
         <h5 class="font-weight-bold mb-0 d-block">241</h5>
         <small class="text-muted">
-          <i class="fa fa-picture-o mr-1"></i>Photos</small
+          <i class="fa fa-picture-o mr-1"></i>Playlists</small
         >
       </li>
       <li class="list-inline-item">
@@ -40,39 +39,36 @@
 
   <div class="py-4 px-4">
     <div class="d-flex align-items-center justify-content-between mb-3">
-      <h5 class="mb-0">Recent photos</h5>
+      <h3 class="mb-0">Favorites</h5>
       <a href="#" class="btn btn-link text-muted">Show all</a>
     </div>
-    <div class="row">
-      <div class="col-lg-6 mb-2 pr-lg-1">
+  </div>
+
+  {% for favorite in profile.favorites.all %}
+  <div class="card p-1" style="width: 20rem;">
         <img
-          src="https://res.cloudinary.com/mhmd/image/upload/v1556294928/nicole-honeywill-546848-unsplash_ymprvp.jpg"
-          alt=""
-          class="img-fluid rounded shadow-sm"
+        src="{{ favorite.image_url}}"
+        width="300"
+        height="210"
+        class="card-img-top"
+        alt="..."
         />
-      </div>
-      <div class="col-lg-6 mb-2 pl-lg-1">
-        <img
-          src="https://res.cloudinary.com/mhmd/image/upload/v1556294927/dose-juice-1184444-unsplash_bmbutn.jpg"
-          alt=""
-          class="img-fluid rounded shadow-sm"
-        />
-      </div>
-      <div class="col-lg-6 pr-lg-1 mb-2">
-        <img
-          src="https://res.cloudinary.com/mhmd/image/upload/v1556294926/cody-davis-253925-unsplash_hsetv7.jpg"
-          alt=""
-          class="img-fluid rounded shadow-sm"
-        />
-      </div>
-      <div class="col-lg-6 pl-lg-1">
-        <img
-          src="https://res.cloudinary.com/mhmd/image/upload/v1556294928/tim-foster-734470-unsplash_xqde00.jpg"
-          alt=""
-          class="img-fluid rounded shadow-sm"
-        />
-      </div>
+        <div class="card-body">
+        <h5 class="card-title">{{ favorite.name }}</h5>
+        <p class="card-text">{{ favorite.description }}</p>
+        </div>
+        <div class="card-text col-1">
+        <a
+            href="{% url 'technique_detail' favorite.id %}"
+            class="btn btn-secondary"
+            >View</a
+        >
+
+        </div>
     </div>
+
+    {% endfor %}
+
     <div class="py-4">
       <h5 class="mb-3">Recent posts</h5>
       <div class="p-4 bg-light rounded shadow-sm">
@@ -92,7 +88,8 @@
       </div>
     </div>
   </div>
-</div>
-<!-- End profile widget -->
 
-{% endblock %}
+  <!-- End profile widget -->
+
+  {% endblock %}
+</div>
