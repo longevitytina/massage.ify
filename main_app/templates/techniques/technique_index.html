@@ -1,40 +1,35 @@
 {% extends 'base.html' %} {% block content %}
 <h1 class="mt-2">Techniques Index</h1>
-<div class="row p-4">
-  <div class="col-sm-6">
-    {% for technique in techniques %}
-
-    <div class="card p-1" style="width: 20rem;">
-      <img
-        src="{{ technique.image_url}}"
-        width="300"
-        height="210"
-        class="card-img-top"
-        alt="..."
-      />
-      <div class="card-body">
-        <h5 class="card-title">{{ technique.name }}</h5>
-        <p class="card-text">{{ technique.description }}</p>
-      </div>
-      <div class="card-text col-1">
-        <div class="btn-group">
-          <a
-            href="{% url 'technique_detail' technique.id %}"
-            class="btn btn-secondary"
-            >View</a
-          >
-          <form
-            action="{% url 'assoc_technique' profile.id technique.id %}"
-            method="post"
-          >
-            {% csrf_token %}
-            <button type="submit" class="btn">Add</button>
-          </form>
-        </div>
+<div class="card-deck p-3">
+  {% for technique in techniques %}
+  <div class="card">
+    <img
+      class="card-img-top"
+      src="{{ technique.image_url}}"
+      alt="Card image cap"
+    />
+    <div class="card-body">
+      <h5 class="card-title">{{ technique.name }}</h5>
+      <p class="card-text">{{ technique.description }}</p>
+    </div>
+    <div class="card-text col-1">
+      <div class="btn-group pb-3">
+        <a
+          href="{% url 'technique_detail' technique.id %}"
+          class="btn btn-secondary"
+          >View</a
+        >
+        <form
+          action="{% url 'assoc_technique' profile.id technique.id %}"
+          method="post"
+        >
+          {% csrf_token %}
+          <button type="submit" class="btn">Add</button>
+        </form>
       </div>
     </div>
-
-    {% endfor %}
   </div>
+
+  {% endfor %}
 </div>
 {% endblock %}
