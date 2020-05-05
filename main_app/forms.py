@@ -1,8 +1,14 @@
 from django import forms
-from .models import PlaylistTechnique
+from .models import Playlist, PlaylistTechnique
 
 
 class PlaylistForm(forms.ModelForm):
     class Meta:
-        model = PlaylistTechnique
-        fields = ('technique', 'duration', 'order')
+        model = Playlist
+        fields = ('name',)
+
+
+# class TechniqueForm(forms.ModelForm):
+#     class Meta:
+#         model = PlaylistTechnique
+#         fields = ('techniques', 'order')
