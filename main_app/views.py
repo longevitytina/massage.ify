@@ -3,6 +3,7 @@ from .models import *
 from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
+from .forms import *
 
 
 def home(request):
@@ -68,3 +69,19 @@ def assoc_technique(request, profile_id, technique_id):
     technique = Technique.objects.get(id=technique_id)
 
     return redirect('techniques_list')
+
+
+@login_required
+def new_playlist(request):
+    if request.method == 'POST':
+        form = PlaylistForm(request.POST)
+        if form.is_valid():
+            playlist = form.save(commit=False)
+
+            playlist.user = request.user.profile
+            playlist.save()
+            return redirect('profile')
+    else:
+        form = PlaylistForm()
+    context = {'form': form}
+    return render(request, 'playlists/playlist_form.html', context)
