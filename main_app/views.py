@@ -89,8 +89,12 @@ def new_playlist(request):
     return render(request, 'playlists/playlist_form.html', context)
 
 
-# def add_techniques(request):
+def delete_favorite(request, technique_id):
+    profile = request.user.profile
+    technique = Technique.objects.get(id=technique_id)
+    profile.favorites.remove(technique)
 
+    return redirect('profile')
 
 # def playlist_detail(request, playlist_id):
 #     playlist = Playlist.objects.get(id=playlist_id)
