@@ -105,11 +105,8 @@ def delete_favorite(request, technique_id):
 
     return redirect('profile')
 
-# def playlist_detail(request, playlist_id):
-#     playlist = Playlist.objects.get(id=playlist_id)
-#     # playlist_techniques =
-#     techniques = playlist.techniques.all()
-#     context = {'playlist': playlist,
-#                'techniques': techniques}
 
-#     return render(request, 'playlists/playlist_detail.html', context)
+def delete_playlist(request, playlist_id):
+    Playlist.objects.get(id=playlist_id).delete()
+    print(playlist_id)
+    return redirect('profile')
