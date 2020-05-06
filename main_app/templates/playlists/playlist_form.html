@@ -2,7 +2,10 @@
 <section class="form-section">
   <h1>Creat your playlist</h1>
   <form method="POST" class="artist-form">
-    {% csrf_token %} {{form.as_p}}
+    {{form.as_p}}
+  </br>
+    {% csrf_token %} {{formset.as_p}}
+
     <button class="btn" type="submit">Save</button>
   </form>
 </section>

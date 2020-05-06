@@ -4,6 +4,7 @@ from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
 from .forms import *
+from django.forms import inlineformset_factory
 
 
 def home(request):
@@ -74,29 +75,33 @@ def assoc_technique(request, profile_id, technique_id):
 
 
 def new_playlist(request):
+    playlistform = Playlist.objects.create(user=request.user.profile)
+    PlaylistInlineFormSet = inlineformset_factory(
+        Playlist, PlaylistTechnique, fields=('technique', 'duration', 'order'))
     if request.method == 'POST':
-        form = PlaylistForm(request.POST)
-        if form.is_valid():
-            playlist = form.save(commit=False)
-
-            playlist.user = request.user.profile
-            playlist.save()
+        form = PlaylistForm()
+        formset = PlaylistInlineFormSet(
+            request.POST, request.FILES, instance=playlist)
+        if formset.is_valid():
+            formset.save()
+            form.save()
             return redirect('profile')
 
     else:
         form = PlaylistForm()
-    context = {'form': form}
+        formset = PlaylistInlineFormSet()
+    context = {'formset': formset, 'form': form}
     return render(request, 'playlists/playlist_form.html', context)
 
 
 # def add_techniques(request):
 
 
-# def playlist_detail(request, playlist_id):
-#     playlist = Playlist.objects.get(id=playlist_id)
-#     # playlist_techniques =
-#     techniques = playlist.techniques.all()
-#     context = {'playlist': playlist,
-#                'techniques': techniques}
+def playlist_detail(request, playlist_id):
+    playlist = Playlist.objects.get(id=playlist_id)
+    # playlist_techniques =
+    techniques = playlist.techniques.all()
+    context = {'playlist': playlist,
+               'techniques': techniques}
 
-#     return render(request, 'playlists/playlist_detail.html', context)
+    return render(request, 'playlists/playlist_detail.html', context)
