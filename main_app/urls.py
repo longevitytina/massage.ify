@@ -13,8 +13,8 @@ urlpatterns = [
          views.technique_detail, name='technique_detail'),
     path('profile/', views.profile, name='profile'),
     path('profile/new', views.new_playlist, name='new_playlist'),
-    #     path('profile/playlist/<int:playlist_id>/detail',
-    #          views.playlist_detail, name='playlist_detail'),
+    path('profile/playlist/<int:playlist_id>/detail',
+         views.playlist_detail, name='playlist_detail'),
 
     path('accounts/signup', views.signup, name='signup'),
     path('profile/<int:technique_id>/delete/',
