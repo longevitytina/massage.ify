@@ -4,7 +4,7 @@
   class="bg-dark shadow rounded overflow-hidden text-white d-flex align-items-center justify-content-between mb-3"
 >
   <div class="px-4 pt-0 pb-4">
-    <h1 class="mb-0">playlists detail</h1>
+    <h1 class="mb-0">{{playlist.name}}</h1>
     <a
       href="{% url 'delete_playlist' playlist.id %}"
       class="btn btn-link text-muted"
@@ -26,6 +26,7 @@
       <p class="card-text">{{ technique.technique.description }}</p>
       <p class="card-text">Duration: {{ technique.duration }} min.</p>
       <p class="card-text">Order: {{ technique.order }}</p>
+      <!-- <a href="{% url 'technique_detail' technique.id %}">View</a> -->
     </div>
   </div>
   {% endfor %}
