@@ -18,9 +18,9 @@ urlpatterns = [
 
     path('accounts/signup', views.signup, name='signup'),
 
-    path('profile/<int:technique_id>/delete/',
+    path('profile/<int:technique_id>/delete_favorites/',
          views.delete_favorite, name='delete_favorite'),
 
-    path('profile/<int:playlist_id>/delete/',
+    path('profile/<int:playlist_id>/delete_playlist/',
          views.delete_playlist, name='delete_playlist'),
 ]
