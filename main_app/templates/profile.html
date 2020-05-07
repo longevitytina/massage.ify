@@ -77,7 +77,7 @@
                    >View</a>
                     <a href="{% url 'delete_favorite' favorite.id %}"
                     >Delete</a>
-                    <a href="#">Playlist</a>
+                    <a href="{% url 'assoc_playlist_item' favorite.id %}">Playlist</a>
 
                 </div>
             </div>
