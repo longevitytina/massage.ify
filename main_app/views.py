@@ -70,6 +70,25 @@ def assoc_technique(request, profile_id, technique_id):
     return redirect('techniques_list')
 
 
+def assoc_playlist_item(request, technique_id):
+    technique = Technique.objects.get(id=technique_id)
+
+    if request.method == 'POST':
+        form = SelectPlaylistForm(request.POST)
+        if form.is_valid():
+            playlist = form.save(commit=False)
+
+            playlist.technique = technique
+            playlist.user = request.user.profile
+            playlist.save()
+            return redirect('profile')
+
+    else:
+        form = SelectPlaylistForm()
+    context = {'form': form}
+    return render(request, 'playlists/add_technique.html', context)
+
+
 def new_playlist(request):
     if request.method == 'POST':
         form = PlaylistForm(request.POST)
@@ -87,10 +106,18 @@ def new_playlist(request):
 
 
 def playlist_detail(request, playlist_id):
+    profile = request.user.profile
+
     playlist = Playlist.objects.get(id=playlist_id)
-    techniques = playlist.techniques.all()
-    context = {'playlist': playlist,
-               'techniques': techniques}
+    techniques = playlist.techniques.get
+    playlist_techniques = PlaylistTechnique.objects.filter(
+        playlist_id=playlist_id)
+    context = {
+        'playlist_techniques': playlist_techniques,
+        'profile': profile,
+        'playlist': playlist,
+        'techniques': techniques}
+    print(playlist_techniques[0].duration)
 
     return render(request, 'playlists/playlist_detail.html', context)
 
