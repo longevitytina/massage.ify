@@ -1,0 +1,6 @@
+{% extends 'base.html' %} {% block content %}
+<p>playlists detail</p>
+<a href="{% url 'delete_playlist' playlist.id %}" class="btn btn-secondary"
+  >Delete</a
+>
+{% endblock %}

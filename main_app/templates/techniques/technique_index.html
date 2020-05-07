@@ -19,13 +19,19 @@
           class="btn btn-secondary"
           >View</a
         >
+        {% if user.is_authenticated %}
         <form
           action="{% url 'assoc_technique' profile.id technique.id %}"
           method="post"
         >
           {% csrf_token %}
-          <button type="submit" class="btn">Add</button>
+          <button type="submit" class="btn btn-secondary">Add</button>
         </form>
+        {% else %}
+        <button type="submit" class="btn btn-secondary" disabled>
+          Nope
+        </button>
+        {% endif %}
       </div>
     </div>
   </div>

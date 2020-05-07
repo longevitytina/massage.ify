@@ -58,6 +58,9 @@ Instructions go here..
 [Extra fields on many-to-many relationships](https://docs.djangoproject.com/en/dev/topics/db/models/#extra-fields-on-many-to-many-relationships)
 [Random pic generator](https://source.unsplash.com/)
 [ManyToMany convert queryset iteration ](https://stackoverflow.com/questions/45768190/typeerror-manyrelatedmanager-object-is-not-iterable)
+[is_authenticated](https://docs.djangoproject.com/en/2.0/topics/auth/default/#limiting-access-to-logged-in-users)
 
 [Bootstrap profile page starter](https://bootstrapious.com/p/bootstrap-profile-page)
+[Nested forms inline](https://swapps.com/blog/working-with-nested-forms-with-django/)
 [Align buttons](https://stackoverflow.com/questions/20962483/how-do-i-make-two-bootstrap-buttons-side-by-side/20962556)
+[Modeling playlists](https://stackoverflow.com/questions/4799378/best-way-to-make-a-simple-orderable-playlist-in-django)
