@@ -4,7 +4,6 @@ from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
 from .forms import *
-from django.forms import inlineformset_factory
 
 
 def home(request):
@@ -36,9 +35,6 @@ def technique_detail(request, technique_id):
 
 @login_required
 def profile(request):
-    # list of favorite techniques
-    # user account info
-    # profile = Profile.objects.get(id=profile_id)
     profile = request.user.profile
 
     user = request.user
@@ -75,22 +71,18 @@ def assoc_technique(request, profile_id, technique_id):
 
 
 def new_playlist(request):
-    playlistform = Playlist.objects.create(user=request.user.profile)
-    PlaylistInlineFormSet = inlineformset_factory(
-        Playlist, PlaylistTechnique, fields=('technique', 'duration', 'order'))
     if request.method == 'POST':
-        form = PlaylistForm()
-        formset = PlaylistInlineFormSet(
-            request.POST, request.FILES, instance=playlist)
-        if formset.is_valid():
-            formset.save()
-            form.save()
+        form = PlaylistForm(request.POST)
+        if form.is_valid():
+            playlist = form.save(commit=False)
+
+            playlist.user = request.user.profile
+            playlist.save()
             return redirect('profile')
 
     else:
         form = PlaylistForm()
-        formset = PlaylistInlineFormSet()
-    context = {'formset': formset, 'form': form}
+    context = {'form': form}
     return render(request, 'playlists/playlist_form.html', context)
 
 
