@@ -47,7 +47,8 @@
 
     <div class="list-group">
     {% for playlist in profile.playlist_set.all %}
-      <a href="#" class="list-group-item list-group-item-action ">{{playlist.name}}</a>
+      <a href="{% url 'playlist_detail' playlist.id %}" class="list-group-item list-group-item-action ">{{playlist.name}}</a>
+
       {% endfor %}
     </div>
     </div>
@@ -58,7 +59,7 @@
       <h3 class="mb-0">Favorites</h5>
       <a href="#" class="btn btn-link text-muted">Show all</a>
     </div>
-    <div class="card-deck p-3" style="max-width: 18rem">
+    <div class="card-deck p-3" style="max-width: 30rem">
         {% for favorite in profile.favorites.all %}
         <div class="card">
             <img
@@ -73,7 +74,11 @@
             <div class="card-text col-1">
                 <div class="btn-group pb-3">
                     <a href="{% url 'technique_detail' favorite.id %}"
-                    class="btn btn-secondary">View</a>
+                   >View</a>
+                    <a href="{% url 'delete_favorite' favorite.id %}"
+                    >Delete</a>
+                    <a href="#">Playlist</a>
+
                 </div>
             </div>
         </div>
