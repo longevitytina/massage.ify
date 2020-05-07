@@ -94,14 +94,24 @@ def new_playlist(request):
     return render(request, 'playlists/playlist_form.html', context)
 
 
-# def add_techniques(request):
-
-
 def playlist_detail(request, playlist_id):
     playlist = Playlist.objects.get(id=playlist_id)
-    # playlist_techniques =
     techniques = playlist.techniques.all()
     context = {'playlist': playlist,
                'techniques': techniques}
 
     return render(request, 'playlists/playlist_detail.html', context)
+
+
+def delete_favorite(request, technique_id):
+    profile = request.user.profile
+    technique = Technique.objects.get(id=technique_id)
+    profile.favorites.remove(technique)
+
+    return redirect('profile')
+
+
+def delete_playlist(request, playlist_id):
+    Playlist.objects.get(id=playlist_id).delete()
+    print(playlist_id)
+    return redirect('profile')
