@@ -1,18 +1,32 @@
 {% extends 'base.html' %} {% block content %}
 
-<p>playlists detail</p>
-<div class="btn-group pb-3" style="width: 10%;">
-  <a href="{% url 'delete_playlist' playlist.id %}" class="btn btn-secondary"
-    >Delete</a
-  >
+<div
+  class="bg-dark shadow rounded overflow-hidden text-white d-flex align-items-center justify-content-between mb-3"
+>
+  <div class="px-4 pt-0 pb-4">
+    <h1 class="mb-0">playlists detail</h1>
+    <a
+      href="{% url 'delete_playlist' playlist.id %}"
+      class="btn btn-link text-muted"
+      >Delete Playlist</a
+    >
+  </div>
 </div>
 <div class="card-deck p-3" style="max-width: 30rem;">
   {% for technique in playlist_techniques.all %}
-  <div class="card-body">
-    <h5 class="card-title">{{ technique.technique.name }}</h5>
-    <p class="card-text">{{ technique.technique.description }}</p>
-    <p class="card-text">Duration: {{ technique.duration }}</p>
-    <p class="card-text">Order: {{ technique.order }}</p>
+  <div class="card shadow">
+    <img
+      class="card-img-top"
+      src="{{ technique.technique.image_url}}"
+      alt="Card image cap"
+    />
+
+    <div class="card-body">
+      <h5 class="card-title">{{ technique.technique.name }}</h5>
+      <p class="card-text">{{ technique.technique.description }}</p>
+      <p class="card-text">Duration: {{ technique.duration }} min.</p>
+      <p class="card-text">Order: {{ technique.order }}</p>
+    </div>
   </div>
   {% endfor %}
 </div>
