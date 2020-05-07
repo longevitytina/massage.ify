@@ -61,5 +61,6 @@ Instructions go here..
 [is_authenticated](https://docs.djangoproject.com/en/2.0/topics/auth/default/#limiting-access-to-logged-in-users)
 
 [Bootstrap profile page starter](https://bootstrapious.com/p/bootstrap-profile-page)
+[Nested forms inline](https://swapps.com/blog/working-with-nested-forms-with-django/)
 [Align buttons](https://stackoverflow.com/questions/20962483/how-do-i-make-two-bootstrap-buttons-side-by-side/20962556)
 [Modeling playlists](https://stackoverflow.com/questions/4799378/best-way-to-make-a-simple-orderable-playlist-in-django)
