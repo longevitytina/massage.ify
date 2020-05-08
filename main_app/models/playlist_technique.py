@@ -1,5 +1,8 @@
 from django.db import models
 
+# dynamic tuple connected to users playlists in DB
+# PLAYLIST = ()
+
 
 class PlaylistTechnique(models.Model):
     playlist = models.ForeignKey("Playlist", on_delete=models.CASCADE)

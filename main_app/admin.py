@@ -10,11 +10,15 @@ class FollowingA(admin.ModelAdmin):
     list_display = ('from_user', 'to_user')
 
 
+class PlaylistTechA(admin.ModelAdmin):
+    list_display = ('playlist', 'technique')
+
+
 # Register your models here.
 admin.site.register(Technique)
 admin.site.register(Profile, ProfileA)
 admin.site.register(Playlist)
-admin.site.register(PlaylistTechnique)
+admin.site.register(PlaylistTechnique, PlaylistTechA)
 admin.site.register(Following, FollowingA)
 
 

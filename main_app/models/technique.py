@@ -15,4 +15,4 @@ class Technique(models.Model):
         return self.name
 
     def get_absolute_url(self):
-        return reverse("index", kwargs={"pk": self.id})
+        return reverse("index", kwargs={"technique_id": self.id})
