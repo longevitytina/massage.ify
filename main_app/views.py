@@ -30,6 +30,8 @@ def techniques_list(request):
 
 def technique_detail(request, technique_id):
     technique = Technique.objects.get(id=technique_id)
+    print()
+
     return render(request, 'techniques/technique_detail.html', {'technique': technique})
 
 
@@ -107,9 +109,7 @@ def new_playlist(request):
 
 def playlist_detail(request, playlist_id):
     profile = request.user.profile
-
     playlist = Playlist.objects.get(id=playlist_id)
-    techniques = playlist.techniques.get
     playlist_techniques = PlaylistTechnique.objects.filter(
         playlist_id=playlist_id)
     context = {
@@ -118,9 +118,7 @@ def playlist_detail(request, playlist_id):
         'playlist_techniques': playlist_techniques,
         'profile': profile,
         'playlist': playlist,
-        'techniques': techniques}
-    print(playlist_techniques[0].duration)
-
+    }
     return render(request, 'playlists/playlist_detail.html', context)
 
 
@@ -128,7 +126,6 @@ def delete_favorite(request, technique_id):
     profile = request.user.profile
     technique = Technique.objects.get(id=technique_id)
     profile.favorites.remove(technique)
-
     return redirect('profile')
 
 
