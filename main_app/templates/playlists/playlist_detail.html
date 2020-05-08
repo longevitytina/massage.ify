@@ -12,25 +12,37 @@
   </div>
 </div>
 <button class="startTime" type="button">Start Playlist</button>
-<div class="card-deck p-3" style="max-width: 30rem;">
-  {% for technique in playlist_techniques.all %}
-  <div class="card shadow">
-    <img
-      class="card-img-top"
-      src="{{ technique.technique.image_url}}"
-      alt="Card image cap"
-    />
 
-    <div class="card-body">
-      <h5 class="card-title">{{ technique.technique.name }}</h5>
-      <p class="card-text">{{ technique.technique.description }}</p>
-      <p class="card-text durations">Duration: {{ technique.duration }} min.</p>
-      <p class="card-text">Order: {{ technique.order }}</p>
-      <a href="{% url 'technique_detail' technique.technique.id %}">View</a>
+<div class="row container d-flex justify-content-center">
+  <div class="col-lg-12 col-xl-6">
+    {% for technique in playlist_techniques.all %}
+    <div class="card shadow">
+      <div class="card-block p-b-0 pt-3">
+        <div class="col-md-12" id="sortable">
+          <div class="sortable-moves" draggable="True">
+            <img
+              class="img-fluid p-absolute image-dim"
+              src="{{ technique.technique.image_url}}"
+              alt="Card image cap"
+              draggable="true"
+            />
+            <h5>{{ technique.technique.name }}</h5>
+            <p>{{ technique.technique.description }}</p>
+            <p>
+              Duration: {{ technique.duration }} min.
+            </p>
+            <p>Order: {{ technique.order }}</p>
+            <a href="{% url 'technique_detail' technique.technique.id %}"
+              >View</a
+            >
+          </div>
+        </div>
+      </div>
     </div>
+    {% endfor %}
   </div>
-  {% endfor %}
 </div>
+
 <p id="countdown">{{total_duration}}</p>
 
 {% endblock %}
