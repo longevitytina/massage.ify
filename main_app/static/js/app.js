@@ -1,3 +1,4 @@
+// Timer stuff---------------------------
 const startTimer = document.querySelector(".startTime");
 
 startTimer.addEventListener("click", function () {
@@ -13,4 +14,9 @@ startTimer.addEventListener("click", function () {
       document.getElementById("countdown").innerHTML = "massage done!";
     }
   }, 1000);
+});
+
+new Sortable(sortablelist, {
+  animation: 150,
+  ghostClass: "sortable-ghost",
 });
