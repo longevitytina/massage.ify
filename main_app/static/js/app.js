@@ -16,26 +16,7 @@ startTimer.addEventListener("click", function () {
   }, 1000);
 });
 
-// Drag and drop stuff==================================
-// ondrag, ondragend, ondragenter, ondragexit, ondragleave, ondragover, ondragstart, and ondrop.
-
-// function onDragStart(event) {
-//   event.dataTransfer.setData("text/plain", event.target.id);
-
-//   event.currentTarget.style.backgroundColor = "yellow";
-// }
-
-// function onDragOver(event) {
-//   event.preventDefault();
-// }
-
-// function onDrop(event) {
-//   const id = event.dataTransfer.getData("text");
-
-//   const draggableElement = document.getElementById(id);
-//   const dropzone = event.target;
-
-//   dropzone.appendChild(draggableElement);
-
-//   event.dataTransfer.clearData();
-// }
+new Sortable(sortablelist, {
+  animation: 150,
+  ghostClass: "sortable-ghost",
+});
