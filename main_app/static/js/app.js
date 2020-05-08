@@ -3,8 +3,6 @@ const startTimer = document.querySelector(".startTime");
 
 startTimer.addEventListener("click", function () {
   let time = Number(document.querySelector("#countdown").innerText);
-  let durationValue = document.querySelector("durations");
-  console.log(durationValue);
 
   setInterval(function () {
     document.getElementById("countdown").innerHTML = time;
