@@ -4,6 +4,7 @@
 >
   <div class="px-4 pt-0 pb-4">
     <h1 class="mb-0">{{playlist.name}}</h1>
+    <p id="countdown">{{total_duration}}</p>
     <a
       href="{% url 'delete_playlist' playlist.id %}"
       class="btn btn-link text-muted"
@@ -13,8 +14,8 @@
 </div>
 <button class="startTime" type="button">Start Playlist</button>
 
-<div class="row container d-flex justify-content-center">
-  <div class="col-lg-12 col-xl-6" id="sortablelist">
+<div class="row container d-flex">
+  <div class="col-lg-12 col-xl-6 p-3" id="sortablelist">
     {% for technique in playlist_techniques.all %}
     <div class="card shadow">
       <div class="card-block p-b-0 pt-3" draggable="True">
@@ -28,12 +29,13 @@
             <h5>{{ technique.technique.name }}</h5>
             <p>{{ technique.technique.description }}</p>
             <p>
-              Duration: {{ technique.duration }} min.
+              Duration: {{ technique.duration }} sec.
             </p>
-            <p>Order: {{ technique.order }}</p>
             <a href="{% url 'technique_detail' technique.technique.id %}"
               >View</a
             >
+            <a href="#">Edit</a>
+            <a href="#">Remove</a>
           </div>
         </div>
       </div>
@@ -41,7 +43,5 @@
     {% endfor %}
   </div>
 </div>
-
-<p id="countdown">{{total_duration}}</p>
 
 {% endblock %}

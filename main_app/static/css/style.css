@@ -1,3 +1,14 @@
+* {
+  font-family: "Indie Flower", cursive;
+}
+.jumbotron {
+  text-align: center;
+}
+.divider {
+  width: 30%;
+  padding-left: 4.11111em;
+}
+
 body {
   display: flex;
   min-height: 100vh;
@@ -25,18 +36,19 @@ footer {
 }
 
 .sortable-moves {
+  padding-left: 10.11111em;
   font-size: 14px;
   line-height: 1em;
   list-style-type: none;
   margin-bottom: 15px;
   min-height: 3.55556em;
-  padding-left: 10.11111em;
   position: relative;
   cursor: move;
 }
 
 .sortable-moves img {
   position: absolute;
+
   height: 100px;
   width: 120px;
   left: 10px;
