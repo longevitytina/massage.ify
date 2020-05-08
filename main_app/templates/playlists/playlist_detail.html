@@ -1,5 +1,4 @@
 {% extends 'base.html' %} {% block content %}
-
 <div
   class="bg-dark shadow rounded overflow-hidden text-white d-flex align-items-center justify-content-between mb-3"
 >
@@ -12,6 +11,7 @@
     >
   </div>
 </div>
+<button class="startTime" type="button">Start Playlist</button>
 <div class="card-deck p-3" style="max-width: 30rem;">
   {% for technique in playlist_techniques.all %}
   <div class="card shadow">
@@ -24,11 +24,13 @@
     <div class="card-body">
       <h5 class="card-title">{{ technique.technique.name }}</h5>
       <p class="card-text">{{ technique.technique.description }}</p>
-      <p class="card-text">Duration: {{ technique.duration }} min.</p>
+      <p class="card-text durations">Duration: {{ technique.duration }} min.</p>
       <p class="card-text">Order: {{ technique.order }}</p>
       <!-- <a href="{% url 'technique_detail' technique.id %}">View</a> -->
     </div>
   </div>
   {% endfor %}
 </div>
+<p id="countdown">{{total_duration}}</p>
+
 {% endblock %}
