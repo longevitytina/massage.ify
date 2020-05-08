@@ -14,17 +14,16 @@
 <button class="startTime" type="button">Start Playlist</button>
 
 <div class="row container d-flex justify-content-center">
-  <div class="col-lg-12 col-xl-6">
+  <div class="col-lg-12 col-xl-6" id="sortablelist">
     {% for technique in playlist_techniques.all %}
     <div class="card shadow">
-      <div class="card-block p-b-0 pt-3">
-        <div class="col-md-12" id="sortable">
-          <div class="sortable-moves" draggable="True">
+      <div class="card-block p-b-0 pt-3" draggable="True">
+        <div class="col-md-12">
+          <div class="sortable-moves">
             <img
               class="img-fluid p-absolute image-dim"
               src="{{ technique.technique.image_url}}"
               alt="Card image cap"
-              draggable="true"
             />
             <h5>{{ technique.technique.name }}</h5>
             <p>{{ technique.technique.description }}</p>
