@@ -26,7 +26,7 @@
       <p class="card-text">{{ technique.technique.description }}</p>
       <p class="card-text durations">Duration: {{ technique.duration }} min.</p>
       <p class="card-text">Order: {{ technique.order }}</p>
-      <!-- <a href="{% url 'technique_detail' technique.id %}">View</a> -->
+      <a href="{% url 'technique_detail' technique.technique.id %}">View</a>
     </div>
   </div>
   {% endfor %}
