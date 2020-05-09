@@ -4,6 +4,7 @@
 >
   <div class="px-4 pt-0 pb-4">
     <h1 class="mb-0">{{playlist.name}}</h1>
+    <p>Massage Timer:</p>
     <p id="countdown">{{total_duration}}</p>
     <a
       href="{% url 'delete_playlist' playlist.id %}"
