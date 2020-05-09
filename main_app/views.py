@@ -112,7 +112,8 @@ def playlist_detail(request, playlist_id):
     playlist = Playlist.objects.get(id=playlist_id)
     playlist_techniques = PlaylistTechnique.objects.filter(
         playlist_id=playlist_id)
-    total_duration = sum(t.duration for t in playlist_techniques)
+    total_duration = (sum(t.duration for t in playlist_techniques)*60)
+
     context = {
 
         'total_duration': total_duration,
