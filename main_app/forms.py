@@ -13,4 +13,8 @@ class SelectPlaylistForm(forms.ModelForm):
         model = PlaylistTechnique
         fields = ('playlist', 'duration', 'order')
 
-    # select_playlist = forms.ChoiceField(choices=[CHOICES], required=True)()
+
+class ChangeTechniqueTime(forms.ModelForm):
+    class Meta:
+        model = PlaylistTechnique
+        fields = ('duration', 'order')
