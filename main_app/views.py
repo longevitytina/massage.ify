@@ -96,7 +96,7 @@ def edit_playlist_item(request, playlist_technique_id):
     playlist_technique = PlaylistTechnique.objects.get(
         id=playlist_technique_id)
     if request.method == 'POST':
-        form = ChangeTechniqueTime(request.POST)
+        form = ChangeTechniqueTime(request.POST, instance=playlist_technique)
         if form.is_valid():
             playlist = form.save(commit=False)
             playlist.technique = playlist_technique.technique
@@ -106,7 +106,7 @@ def edit_playlist_item(request, playlist_technique_id):
             playlist.save()
             return redirect('profile')
     else:
-        form = ChangeTechniqueTime()
+        form = ChangeTechniqueTime(instance=playlist_technique)
     context = {'form': form}
     return render(request, 'playlists/edit_playlist_item.html', context)
 
