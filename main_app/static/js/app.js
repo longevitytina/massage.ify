@@ -12,7 +12,6 @@ startTimer.addEventListener("click", function () {
       sec = parseInt((timeRemaining % 3600) % 60);
     let timeDisplay = `${hours}hr: ${mins}min: ${sec}sec`;
     document.getElementById("countdown").innerHTML = timeDisplay;
-
     if (seconds === maxTime) {
       clearInterval(startTimer);
       document.getElementById("countdown").innerHTML = "massage done!";
@@ -20,7 +19,39 @@ startTimer.addEventListener("click", function () {
   }, 1000);
 });
 
+// Sorting ---------------------------------------
+
+const saveOrderingButton = document.querySelector(".saveOrdering");
+const orderingForm = document.querySelector("#orderingForm");
+const formInput = orderingForm.querySelector("#orderingInput");
+
+saveOrderingButton.addEventListener("click", saveOrdering);
+
+function saveOrdering() {
+  console.log("clicked");
+
+  const cards = document.querySelectorAll("[data-lookup]");
+  let dataIds = [];
+  for (let card of cards) {
+    dataIds.push(card.dataset.lookup);
+  }
+  console.log(card.dataset);
+
+  // formInput.value = dataIds.join(",");
+  console.log(formInput);
+  orderingForm.submit();
+}
+
 new Sortable(sortablelist, {
   animation: 150,
   ghostClass: "sortable-ghost",
+  onSort: () => {
+    $.ajax({
+      url:,
+      method: GET,
+
+
+    });
+    /* ajax request */
+  },
 });
