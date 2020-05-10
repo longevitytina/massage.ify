@@ -17,22 +17,23 @@
 
 <div class="row container d-flex">
   <div class="col-lg-12 col-xl-6 p-3" id="sortablelist">
-    {% for technique in playlist_techniques.all %}
+    {% for playlist_technique in playlist_techniques.all %}
     <div class="card shadow">
       <div class="card-block p-b-0 pt-3" draggable="True">
         <div class="col-md-12">
           <div class="sortable-moves">
             <img
               class="img-fluid p-absolute image-dim"
-              src="{{ technique.technique.image_url}}"
+              src="{{ playlist_technique.technique.image_url}}"
               alt="Card image cap"
             />
-            <h5>{{ technique.technique.name }}</h5>
-            <p>{{ technique.technique.description }}</p>
+            <h5>{{ playlist_technique.technique.name }}</h5>
+            <p>{{ playlist_technique.technique.description }}</p>
             <p>
               Duration: {{ technique.duration }} sec.
             </p>
-            <a href="{% url 'technique_detail' technique.technique.id %}"
+            <a
+              href="{% url 'technique_detail' playlist_technique.technique.id %}"
               >View</a
             >
             <a href="{% url 'edit_playlist_item'  playlist_technique.id %}"
