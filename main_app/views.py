@@ -162,17 +162,18 @@ def delete_playlist_technique(request, playlist_technique_id):
 
 
 def save_new_ordering(request):
-    form = OrderingForm(request.POST)
-    playlist_techniques = PlaylistTechnique.objects.all()
-    if form.is_valid():
-        ordered_ids = form.cleaned_data["ordering"].split(',')
+    print("called")
+    # form = OrderingForm(request.POST)
+    # playlist_techniques = PlaylistTechnique.objects.all()
+    # if form.is_valid():
+    #     ordered_ids = form.cleaned_data["ordering"].split(',')
 
-        with transaction.atomic():
-            current_order = 1
-            for playlist_techniques.id in ordered_ids:
-                group = PlaylistTechnique.objects.get(id=id)
-                group.order = current_order
-                group.save()
-                current_order += 1
+    #     with transaction.atomic():
+    #         current_order = 1
+    #         for playlist_techniques.id in ordered_ids:
+    #             group = PlaylistTechnique.objects.get(id=id)
+    #             group.order = current_order
+    #             group.save()
+    #             current_order += 1
 
     return redirect('profile')

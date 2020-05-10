@@ -26,6 +26,7 @@ const orderingForm = document.querySelector("#orderingForm");
 const formInput = orderingForm.querySelector("#orderingInput");
 
 saveOrderingButton.addEventListener("click", saveOrdering);
+const nodes = document.querySelectorAll(".sortable-moves[data-lookup]");
 
 function saveOrdering() {
   console.log("clicked");
@@ -47,11 +48,10 @@ new Sortable(sortablelist, {
   ghostClass: "sortable-ghost",
   onSort: () => {
     $.ajax({
-      url:,
-      method: GET,
-
-
+      url: "save-group-ordering",
+      success: function () {
+        console.log("clicked");
+      },
     });
-    /* ajax request */
   },
 });
