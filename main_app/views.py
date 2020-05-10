@@ -140,7 +140,7 @@ def playlist_detail(request, playlist_id):
         'profile': profile,
         'playlist': playlist,
     }
-    print(total_duration)
+
     return render(request, 'playlists/playlist_detail.html', context)
 
 
