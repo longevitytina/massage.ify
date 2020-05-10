@@ -39,7 +39,10 @@
             <a href="{% url 'edit_playlist_item'  playlist_technique.id %}"
               >Edit</a
             >
-            <a href="#">Remove</a>
+            <a
+              href="{% url 'delete_playlist_technique' playlist_technique.id %}"
+              >Remove</a
+            >
           </div>
         </div>
       </div>
