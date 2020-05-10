@@ -92,7 +92,6 @@ def assoc_playlist_item(request, technique_id):
 
 
 def edit_playlist_item(request, playlist_technique_id):
-
     playlist_technique = PlaylistTechnique.objects.get(
         id=playlist_technique_id)
     if request.method == 'POST':
@@ -154,5 +153,9 @@ def delete_favorite(request, technique_id):
 
 def delete_playlist(request, playlist_id):
     Playlist.objects.get(id=playlist_id).delete()
-    print(playlist_id)
+    return redirect('profile')
+
+
+def delete_playlist_technique(request, playlist_technique_id):
+    PlaylistTechnique.objects.get(id=playlist_technique_id).delete()
     return redirect('profile')

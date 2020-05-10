@@ -30,4 +30,7 @@ urlpatterns = [
 
     path('profile/<int:playlist_id>/delete_playlist/',
          views.delete_playlist, name='delete_playlist'),
+
+    path('profile/<int:playlist_technique_id>/delete_playlist_technique/',
+         views.delete_playlist_technique, name='delete_playlist_technique'),
 ]
