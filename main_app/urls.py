@@ -17,6 +17,9 @@ urlpatterns = [
     path('profile/playlist/<int:playlist_id>/detail',
          views.playlist_detail, name='playlist_detail'),
 
+    path('profile/<int:playlist_technique_id>/edit',
+         views.edit_playlist_item, name='edit_playlist_item'),
+
     path('profile/<int:technique_id>/add',
          views.assoc_playlist_item, name='assoc_playlist_item'),
 

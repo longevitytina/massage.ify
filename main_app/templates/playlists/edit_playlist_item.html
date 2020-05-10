@@ -1,0 +1,10 @@
+{% extends 'base.html' %} {% block content %}
+<section class="form-section">
+  <h1>Change time</h1>
+  <form method="POST" class="add-form">
+    {{form.as_p}} {% csrf_token %}
+
+    <button class="btn" type="submit">Save</button>
+  </form>
+</section>
+{% endblock %}

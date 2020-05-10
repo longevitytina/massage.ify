@@ -35,7 +35,9 @@
             <a href="{% url 'technique_detail' technique.technique.id %}"
               >View</a
             >
-            <a href="#">Edit</a>
+            <a href="{% url 'edit_playlist_item'  playlist_technique.id %}"
+              >Edit</a
+            >
             <a href="#">Remove</a>
           </div>
         </div>

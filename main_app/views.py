@@ -91,6 +91,26 @@ def assoc_playlist_item(request, technique_id):
     return render(request, 'playlists/add_technique.html', context)
 
 
+def edit_playlist_item(request, playlist_technique_id):
+
+    playlist_technique = PlaylistTechnique.objects.get(
+        id=playlist_technique_id)
+    if request.method == 'POST':
+        form = ChangeTechniqueTime(request.POST)
+        if form.is_valid():
+            playlist = form.save(commit=False)
+            playlist.technique = playlist_technique.technique
+            playlist.playlist = playlist_technique.playlist
+            playlist.id = playlist_technique_id
+            playlist.user = request.user.profile
+            playlist.save()
+            return redirect('profile')
+    else:
+        form = ChangeTechniqueTime()
+    context = {'form': form}
+    return render(request, 'playlists/edit_playlist_item.html', context)
+
+
 def new_playlist(request):
     if request.method == 'POST':
         form = PlaylistForm(request.POST)
