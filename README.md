@@ -63,6 +63,7 @@ Instructions go here..
 [Bootstrap profile page starter](https://bootstrapious.com/p/bootstrap-profile-page)
 [Sortable list library](https://github.com/SortableJS/Sortable)
 [Collectstatic error](https://stackoverflow.com/questions/36665889/collectstatic-error-while-deploying-django-app-to-heroku)
+[Display Timer](https://www.freecodecamp.org/forum/t/return-in-setinterval/186389/8)
 
 [Align buttons](https://stackoverflow.com/questions/20962483/how-do-i-make-two-bootstrap-buttons-side-by-side/20962556)
 [Modeling playlists](https://stackoverflow.com/questions/4799378/best-way-to-make-a-simple-orderable-playlist-in-django)
