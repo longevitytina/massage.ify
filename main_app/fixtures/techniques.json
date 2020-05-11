@@ -4,9 +4,9 @@
     "fields": {
       "name": "Kneading",
       "description": "Circular technique where tissues are lifted, rolled and squeezed",
-      "instructions": "Instructions",
+      "instructions": "Cliche unicorn copper mug la croix bicycle rights magna. Minim occaecat humblebrag in veniam dolor yuccie crucifix wayfarers pickled. Marfa poutine ut do in gluten-free shaman quis pitchfork mustache squid viral tempor gastropub. Chia kickstarter flannel taiyaki actually, tofu ethical sunt prism ut nostrud adaptogen. Flexitarian iPhone lorem taiyaki. Aliquip truffaut do tattooed organic fixie cronut flexitarian.",
       "image_url": "https://images.unsplash.com/photo-1519824145371-296894a0daa9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80",
-      "video_url": "https://youtu.be/ficEDr8Ufqw",
+      "video_url": "https://www.youtube.com/embed/ficEDr8Ufqw",
       "author_id": 1
     }
   },
@@ -15,7 +15,7 @@
     "fields": {
       "name": "Wringing",
       "description": "Helpful for moving toxins out of muscles",
-      "instructions": "Instructions",
+      "instructions": "I'm baby do fam shabby chic, beard pinterest hexagon health goth raw denim stumptown banh mi truffaut thundercats consequat art party authentic. Tattooed kitsch officia you probably haven't heard of them dolor umami chambray ullamco esse. Taiyaki pitchfork yuccie, paleo echo park neutra bicycle rights. Godard yr hashtag cred, nulla in iceland waistcoat semiotics lumbersexual food truck veniam gluten-free nisi.",
       "image_url": "https://3.bp.blogspot.com/-8Kv0e_gQSKw/UpTbtiHXfBI/AAAAAAAAASk/hcmq7e-5tPk/s1600/torson+load+2.jpg",
       "video_url": "https://youtu.be/ficEDr8Ufqw",
       "author_id": 1
@@ -26,9 +26,42 @@
     "fields": {
       "name": "skin rolling ",
       "description": "Used for releasing and clearing obstructions within the soft tissues.",
-      "instructions": "Instructions",
+      "instructions": "Tattooed occaecat lo-fi edison bulb microdosing. Readymade laborum iPhone listicle commodo hexagon, jean shorts eu literally farm-to-table umami polaroid vice offal. Letterpress tumblr post-ironic gentrify authentic poke poutine adaptogen fashion axe twee. Direct trade godard qui, blue bottle banjo schlitz minim viral farm-to-table 8-bit irure iceland art party voluptate organic. Flannel reprehenderit intelligentsia ramps gochujang bespoke biodiesel franzen leggings cupidatat affogato next level put a bird on it.",
       "image_url": "https://images.unsplash.com/photo-1514672013381-c6d0df1c8b18?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80",
-      "video_url": "https://youtu.be/v0DMq-qvp4w?t=20",
+      "video_url": "https://www.youtube.com/embed/v0DMq-qvp4w",
+      "author_id": 1
+    }
+  },
+  {
+    "model": "main_app.technique",
+    "fields": {
+      "name": "Elbow ",
+      "description": "Deep tissue tool for focused work.",
+      "instructions": "Cornhole in normcore direct trade godard marfa. Do YOLO intelligentsia, ex butcher hella poke kale chips occupy flexitarian. Cred deserunt fanny pack ethical, neutra direct trade brunch taxidermy reprehenderit jean shorts. Aliquip anim vice organic PBR&B, street art farm-to-table cold-pressed pabst bespoke mustache kitsch enamel pin. Green juice dreamcatcher edison bulb poke tote bag quis franzen. Cred forage pabst, tousled keffiyeh bushwick four dollar toast. Roof party tempor green juice, post-ironic aliqua elit et keytar man braid umami.",
+      "image_url": "https://www.massagefreo.com.au/wp-content/uploads/2015/09/deep-tissue-massage-fremantle.jpg",
+      "video_url": "https://www.youtube.com/embed/oYftvf7vrfQ",
+      "author_id": 1
+    }
+  },
+  {
+    "model": "main_app.technique",
+    "fields": {
+      "name": "Neck Stretch",
+      "description": "Stretch to relieve neck tension",
+      "instructions": "Taxidermy williamsburg dolor banh mi schlitz. Tousled unicorn heirloom health goth DIY hammock. Everyday carry polaroid post-ironic offal, ramps squid drinking vinegar ut vinyl ugh reprehenderit man bun asymmetrical. Biodiesel street art YOLO, raw denim non banjo tacos. Pitchfork snackwave glossier sunt, aute esse leggings locavore knausgaard quinoa cray irony put a bird on it sint. Tempor vinyl hashtag jean shorts ramps dreamcatcher food truck est blog gochujang skateboard. Pabst jianbing fugiat retro cornhole exercitation tempor neutra four loko shabby chic magna before they sold out.",
+      "image_url": "https://www.massagefreo.com.au/wp-content/uploads/2015/09/deep-tissue-massage-fremantle.jpg",
+      "video_url": "https://www.youtube.com/embed/2NOsE-VPpkE",
+      "author_id": 1
+    }
+  },
+  {
+    "model": "main_app.technique",
+    "fields": {
+      "name": "Back roll out",
+      "description": "Deep tissue tool for focused work.",
+      "instructions": "Taxidermy williamsburg dolor banh mi schlitz. Tousled unicorn heirloom health goth DIY hammock. Everyday carry polaroid post-ironic offal, ramps squid drinking vinegar ut vinyl ugh reprehenderit man bun asymmetrical. Biodiesel street art YOLO, raw denim non banjo tacos. Pitchfork snackwave glossier sunt, aute esse leggings locavore knausgaard quinoa cray irony put a bird on it sint. Tempor vinyl hashtag jean shorts ramps dreamcatcher food truck est blog gochujang skateboard. Pabst jianbing fugiat retro cornhole exercitation tempor neutra four loko shabby chic magna before they sold out.",
+      "image_url": "https://m.media-amazon.com/images/S/aplus-media/sc/62ccaddf-2627-4a72-8e28-42252b012338.__CR1683,1288,1592,1592_PT0_SX300_V1___.jpg",
+      "video_url": "https://www.youtube.com/embed/yY-7CXAHxfY?start=96",
       "author_id": 1
     }
   }

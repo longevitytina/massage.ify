@@ -1,12 +1,23 @@
 * {
+  font-family: "Open Sans Condensed", sans-serif;
+}
+.navbar-brand {
   font-family: "Indie Flower", cursive;
 }
 .jumbotron {
   text-align: center;
 }
-.divider {
+.divider img {
   width: 30%;
   padding-left: 4.11111em;
+}
+
+.delete {
+  float: left;
+}
+
+.countdown {
+  margin-bottom: -0.5rem;
 }
 
 body {
