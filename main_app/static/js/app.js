@@ -43,15 +43,45 @@ function saveOrdering() {
   orderingForm.submit();
 }
 
+
+function getCookie(name) {
+  var cookieValue = null;
+  if (document.cookie && document.cookie !== '') {
+    var cookies = document.cookie.split(';');
+    for (var i = 0; i < cookies.length; i++) {
+      var cookie = cookies[i].trim();
+      // Does this cookie string begin with the name we want?
+      if (cookie.substring(0, name.length + 1) === (name + '=')) {
+        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+        break;
+      }
+    }
+  }
+  return cookieValue;
+}
+var csrftoken = getCookie('csrftoken');
+
+
 new Sortable(sortablelist, {
   animation: 150,
   ghostClass: "sortable-ghost",
   onSort: () => {
+    const cards = Array.from(document.querySelectorAll("[data-lookup]"));
+    const cardIds = cards.map((cardId) => {
+      return cardId.dataset.lookup
+    })
+    console.log(cardIds)
+    console.log(JSON.stringify(cardIds))
     $.ajax({
-      url: "save-group-ordering",
-      success: function () {
-        console.log("clicked");
-      },
+      type: "POST",
+      dataType: 'json',
+      contentType: 'application/json',
+      headers: { "X-CSRFToken": csrftoken },
+      url: "/save-group-ordering",
+      data: JSON.stringify(cardIds),
+      success: function (result) {
+        console.log("success")
+      }
     });
   },
 });

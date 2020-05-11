@@ -4,6 +4,8 @@ from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
 from .forms import *
+import json
+from django.http import HttpResponse
 
 
 def home(request):
@@ -162,7 +164,10 @@ def delete_playlist_technique(request, playlist_technique_id):
 
 
 def save_new_ordering(request):
-    print("called")
+    ordered_ids = request.body
+    # data = json.loads(ordered_ids)
+    print(ordered_ids)
+    print(json.loads(ordered_ids))
     # form = OrderingForm(request.POST)
     # playlist_techniques = PlaylistTechnique.objects.all()
     # if form.is_valid():
@@ -176,4 +181,4 @@ def save_new_ordering(request):
     #             group.save()
     #             current_order += 1
 
-    return redirect('profile')
+    return HttpResponse('Success')
