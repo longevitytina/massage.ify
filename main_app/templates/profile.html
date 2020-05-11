@@ -38,31 +38,31 @@
   </div>
 </div>
 
-  <div class="py-4 px-4">
+  <div class="py-3 px-3">
     <div class="d-flex align-items-center justify-content-between mb-3">
       <h3 class="mb-0">Playlists</h5>
-      <a href="{% url 'new_playlist' %}" class="btn btn-link text-muted">Add Playlist</a>
+      <a href="{% url 'new_playlist' %}" class="btn btn-link text-muted pr-0">Add Playlist</a>
     </div>
 
-    <div class="list-group">
+    <div class="list-group ">
     {% for playlist in profile.playlist_set.all %}
-      <a href="{% url 'playlist_detail' playlist.id %}" class="list-group-item list-group-item-action ">{{playlist.name}}</a>
+      <a href="{% url 'playlist_detail' playlist.id %}" class="list-group-item list-group-item-action p-1 ">{{playlist.name}}</a>
 
       {% endfor %}
     </div>
     </div>
   </div>
-
-
+  <div class="py-3 px-3">
     <div class="d-flex align-items-center justify-content-between mb-3">
-      <h3 class="mb-0">Favorites</h5>
-      <a href="#" class="btn btn-link text-muted">Show all</a>
+      <h3 class="mb-0 ">Favorites</h5>
+      <a href="#" class="btn btn-link text-muted pr-0">Show all</a>
     </div>
     <div class="card-deck p-3" style="max-width: 30rem">
         {% for favorite in profile.favorites.all %}
-        <div class="card">
+        <div class="card shadow" style="max-width: 30rem">
             <img
                 class="card-img-top"
+
                 src="{{ favorite.image_url}}"
                 alt="Card image cap"
             />
@@ -78,6 +78,7 @@
                     >Delete</a>
                     <a href="{% url 'assoc_playlist_item' favorite.id %}">Playlist</a>
 
+                </div>
                 </div>
             </div>
         </div>
