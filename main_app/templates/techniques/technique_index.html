@@ -5,9 +5,9 @@
   </div>
 </div>
 
-<div class="card-deck p-3">
+<ul class="list-group list-group-horizontal align-items-stretch flex-wrap">
   {% for technique in techniques %}
-  <div class="card shadow">
+  <li class="list-group-item p-0 shadow">
     <img
       class="card-img-top"
       src="{{ technique.image_url}}"
@@ -39,8 +39,8 @@
         {% endif %}
       </div>
     </div>
-  </div>
+  </li>
 
   {% endfor %}
-</div>
+</ul>
 {% endblock %}

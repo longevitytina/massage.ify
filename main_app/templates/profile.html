@@ -50,16 +50,14 @@
 
       {% endfor %}
     </div>
-    </div>
   </div>
-  <div class="py-3 px-3">
-    <div class="d-flex align-items-center justify-content-between mb-3">
+    <div class="d-flex align-items-center justify-content-between mb-3 py-3 px-3">
       <h3 class="mb-0 ">Favorites</h5>
       <a href="#" class="btn btn-link text-muted pr-0">Show all</a>
     </div>
-    <div class="card-deck p-3" style="max-width: 30rem">
+    <div class="card-deck py-3 px-3" >
         {% for favorite in profile.favorites.all %}
-        <div class="card shadow" style="max-width: 30rem">
+        <div class="card shadow" >
             <img
                 class="card-img-top"
 
@@ -71,22 +69,20 @@
                 <p class="card-text">{{ favorite.description }}</p>
             </div>
             <div class="card-text col-1">
-                <div class="btn-group pb-3">
-                    <a href="{% url 'technique_detail' favorite.id %}"
+                <div class="btn-group pb-3 ">
+                    <a href="{% url 'technique_detail' favorite.id %}" class="pr-1"
                    >View</a>
-                    <a href="{% url 'delete_favorite' favorite.id %}"
+                    <a href="{% url 'delete_favorite' favorite.id %}" class="pr-1"
                     >Delete</a>
                     <a href="{% url 'assoc_playlist_item' favorite.id %}">Playlist</a>
-
-                </div>
                 </div>
             </div>
-        </div>
-        {% endfor %}
-    </div>
+          </div>
+            {% endfor %}
+      </div>
 
 
-  </div>
+
 
   <!-- End profile widget -->
 
