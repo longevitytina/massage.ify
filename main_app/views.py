@@ -4,6 +4,9 @@ from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
 from .forms import *
+import json
+from django.http import HttpResponse
+from django.db import transaction
 
 
 def home(request):
@@ -130,7 +133,7 @@ def playlist_detail(request, playlist_id):
     profile = request.user.profile
     playlist = Playlist.objects.get(id=playlist_id)
     playlist_techniques = PlaylistTechnique.objects.filter(
-        playlist_id=playlist_id)
+        playlist_id=playlist_id).order_by('order')
     total_duration = (sum(t.duration for t in playlist_techniques)*60)
 
     context = {
@@ -140,7 +143,7 @@ def playlist_detail(request, playlist_id):
         'profile': profile,
         'playlist': playlist,
     }
-    print(total_duration)
+
     return render(request, 'playlists/playlist_detail.html', context)
 
 
@@ -159,3 +162,19 @@ def delete_playlist(request, playlist_id):
 def delete_playlist_technique(request, playlist_technique_id):
     PlaylistTechnique.objects.get(id=playlist_technique_id).delete()
     return redirect('profile')
+
+
+def save_new_ordering(request):
+    ordered_ids = json.loads(request.body)
+    print(ordered_ids)
+
+    playlist_techniques = PlaylistTechnique.objects.all()
+    with transaction.atomic():
+        current_order = 1
+        for id in ordered_ids:
+            playlist_technique = PlaylistTechnique.objects.get(id=id)
+            playlist_technique.order = current_order
+            playlist_technique.save()
+            current_order += 1
+
+    return HttpResponse('Success')
