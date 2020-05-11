@@ -71,11 +71,11 @@ Create a profile, start browsing the index of techniques. Add to your favorites 
 
 ##### Profile Page
 
-<img src="/main_app/static/images/profile.png" width="200" height="200">
+<img src="./main_app/static/images/profile.png" width="200" height="200">
 
 ##### Playlist Page
 
-<img src="/main_app/static/images/playlist_view.png" width="200" height="200">
+<img src="../static/images/playlist_view.png" width="200" height="200">
 
 ##### Create Playlist Page
 
