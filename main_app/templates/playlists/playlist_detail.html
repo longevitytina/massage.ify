@@ -14,6 +14,7 @@
   </div>
 </div>
 <button class="startTime" type="button">Start Playlist</button>
+<button class="saveOrdering" type="button">Save Ordering</button>
 
 <div class="row container d-flex">
   <div class="col-lg-12 col-xl-6 p-3" id="sortablelist">
@@ -21,7 +22,15 @@
     <div class="card shadow">
       <div class="card-block p-b-0 pt-3" draggable="True">
         <div class="col-md-12">
-          <div class="sortable-moves">
+          <div class="sortable-moves" data-lookup="{{playlist_technique.id}}">
+            <form
+              id="orderingForm"
+              method="post"
+              action="{% url 'save-group-oldering' %}"
+            >
+              {% csrf_token %}
+              <input type="hidden" id="orderingIput" name="ordering" />
+            </form>
             <img
               class="img-fluid p-absolute image-dim"
               src="{{ playlist_technique.technique.image_url}}"
@@ -29,6 +38,7 @@
             />
             <h5>{{ playlist_technique.technique.name }}</h5>
             <p>{{ playlist_technique.technique.description }}</p>
+            <p>Position: {{ playlist_technique.order }}</p>
             <p>
               Duration: {{ playlist_technique.duration }} min
             </p>

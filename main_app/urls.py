@@ -33,4 +33,7 @@ urlpatterns = [
 
     path('profile/<int:playlist_technique_id>/delete_playlist_technique/',
          views.delete_playlist_technique, name='delete_playlist_technique'),
+    path('save-group-ordering', views.save_new_ordering,
+         name='save-group-oldering'),
+
 ]
