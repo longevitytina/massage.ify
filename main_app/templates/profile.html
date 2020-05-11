@@ -1,6 +1,5 @@
 {% extends 'base.html' %} {% block content %}
 
-<!-- Profile widget -->
 <div class="bg-white shadow rounded overflow-hidden">
   <div class="px-4 pt-0 pb-4 bg-dark">
     <div class="media align-items-end profile-header">
@@ -45,9 +44,8 @@
     </div>
 
     <div class="list-group ">
-    {% for playlist in profile.playlist_set.all %}
+      {% for playlist in profile.playlist_set.all %}
       <a href="{% url 'playlist_detail' playlist.id %}" class="list-group-item list-group-item-action p-1 ">{{playlist.name}}</a>
-
       {% endfor %}
     </div>
   </div>
@@ -55,35 +53,33 @@
       <h3 class="mb-0 ">Favorites</h5>
       <a href="#" class="btn btn-link text-muted pr-0">Show all</a>
     </div>
-    <div class="card-deck py-3 px-3" style="max-width:30rem">
+    <ul class="list-group list-group-horizontal align-items-stretch flex-wrap">
         {% for favorite in profile.favorites.all %}
-        <div class="card shadow" >
-            <img
-                class="card-img-top"
-
-                src="{{ favorite.image_url}}"
-                alt="Card image cap"
-            />
-            <div class="card-body">
-                <h5 class="card-title">{{ favorite.name }}</h5>
-                <p class="card-text">{{ favorite.description }}</p>
-            </div>
-            <div class="card-text col-1">
-                <div class="btn-group pb-3 ">
-                    <a href="{% url 'technique_detail' favorite.id %}" class="pr-1"
-                   >View</a>
-                    <a href="{% url 'delete_favorite' favorite.id %}" class="pr-1"
-                    >Delete</a>
-                    <a href="{% url 'assoc_playlist_item' favorite.id %}">Playlist</a>
-                </div>
-            </div>
+      <li class="list-group-item p-0 shadow">
+          <img
+              class="card-img-top"
+              src="{{ favorite.image_url}}"
+              alt="Card image cap"
+          />
+          <div class="card-body">
+              <h5 class="card-title">{{ favorite.name }}</h5>
+              <p class="card-text">{{ favorite.description }}</p>
           </div>
-            {% endfor %}
-      </div>
+          <div class="card-text col-1">
+              <div class="btn-group pb-3 ">
+                  <a href="{% url 'technique_detail' favorite.id %}" class="pr-1"
+                  >View</a>
+                  <a href="{% url 'delete_favorite' favorite.id %}" class="pr-1"
+                  >Delete</a>
+                  <a href="{% url 'assoc_playlist_item' favorite.id %}">Playlist</a>
+              </div>
+          </div>
+        </li>
+        {% endfor %}
+    </ul>
 
 
 
 
-  <!-- End profile widget -->
 
   {% endblock %}
