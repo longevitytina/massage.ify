@@ -11,7 +11,7 @@ class PlaylistForm(forms.ModelForm):
 class SelectPlaylistForm(forms.ModelForm):
     class Meta:
         model = PlaylistTechnique
-        fields = ('playlist', 'duration', 'order')
+        fields = ('playlist', 'duration', )
 
 
 class ChangeTechniqueTime(forms.ModelForm):
