@@ -107,11 +107,12 @@ Create a profile, start browsing the index of techniques. Add to your favorites 
 
 - Edit profile
 - Timer settings: User will be able to customize time intervals with alerts
-- Users can upload photos and videos
-  - Self made content
+- Submit techniques to the community
+  - Users can upload photos and videos
+    - Self made content
+      - Connect IG, tiktok, etc..
 - View other user's playlist and add them to your own profile
 - Follow other users
-- Submit techniques to the community
 - Various styling changes
   - Techniques in global database will display message that you've added them.
   - More transitions and icons
