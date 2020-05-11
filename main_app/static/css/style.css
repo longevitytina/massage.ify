@@ -1,10 +1,13 @@
 * {
+  font-family: "Open Sans Condensed", sans-serif;
+}
+.navbar-brand {
   font-family: "Indie Flower", cursive;
 }
 .jumbotron {
   text-align: center;
 }
-.divider {
+.divider img {
   width: 30%;
   padding-left: 4.11111em;
 }
@@ -42,6 +45,7 @@ footer {
   list-style-type: none;
   margin-bottom: 15px;
   min-height: 3.55556em;
+  padding-left: 4.11111em;
   position: relative;
   cursor: move;
 }
