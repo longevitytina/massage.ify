@@ -12,6 +12,14 @@
   padding-left: 4.11111em;
 }
 
+.delete {
+  float: left;
+}
+
+.countdown {
+  margin-bottom: -0.5rem;
+}
+
 body {
   display: flex;
   min-height: 100vh;
