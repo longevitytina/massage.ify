@@ -97,16 +97,35 @@ Create a profile, start browsing the index of techniques. Add to your favorites 
 
 ## Future Updates
 
+##### Technologies
+
+- Add Spotify playlist API
+- Relaunch with React frontend
+- Mobile app version - React Native
+
+##### Features
+
 - Edit profile
 - Timer settings: User will be able to customize time intervals with alerts
-- Add Spotify playlist API
-- Mobile app version
+- Users can upload photos and videos
+  - Self made content
 - View other user's playlist and add them to your own profile
 - Follow other users
 - Submit techniques to the community
 - Various styling changes
   - Techniques in global database will display message that you've added them.
-  -
+  - More transitions and icons
+- Find massage therapist/trainers in your area
+  - connect an external search api like yelp, nextdoor
+  - Provide a site index of therapist in the website community
+    - Provide profile pages for professionals
+- Forums
+  - Post skill-trade inquiries
+  - Post discussions about pain, stories, guidance
+- Injury tracker
+  - Collect data that shows if methodologies/techniques are working
+    - Display graphs to visually represent data
+    - Share data with community, tags techniques used
 
 ## References
 
