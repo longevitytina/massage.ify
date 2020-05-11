@@ -71,27 +71,29 @@ Create a profile, start browsing the index of techniques. Add to your favorites 
 
 ##### Profile Page
 
-<img src="./main_app/static/images/profile.png" width="200" height="200">
+![Wireframe3](/wasteland//main_app/img/ss3.png)
+
+<img src="/main_app/static/Images/profile.png" width="200" height="200">
 
 ##### Playlist Page
 
-<img src="../static/images/playlist_view.png" width="200" height="200">
+<img src="/main_app/static/Images/playlist_view.png" width="200" height="200">
 
 ##### Create Playlist Page
 
-<img src="main_app/static/images/playlist_create.png" width="200" height="200">
+<img src="/main_app/static/Images/playlist_create.png" width="200" height="200">
 
 ##### Technique Index Page
 
-<img src="main_app/static/images/tech_index.png" width="200" height="200">
+<img src="/main_app/static/Images/tech_index.png" width="200" height="200">
 
 ##### Technique Detail Page
 
-<img src="main_app/static/images/technique_detail.png" width="200" height="200">
+<img src="/main_app/static/Images/technique_detail.png" width="200" height="200">
 
 ## Data Models
 
-<img src="main_app/static/images/Datamodels.png" width="200" height="200">
+<img src="/main_app/static/Images/Datamodels.png" width="200" height="200">
 
 ## Future Updates
 
