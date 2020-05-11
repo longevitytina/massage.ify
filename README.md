@@ -19,7 +19,10 @@ Submit your own massage techniques to the community to share your knowledge!
 
 ## Getting Started
 
-Instructions go here..
+A place to collect and share body maintenace approaches and techniques. Submit your own ideas and styles to the community.
+Create playlists with timers that can run all day to give you stretch break reminders or just to help stay on track while providing a massage to someone else for a set interval.
+
+Create a profile, start browsing the index of techniques. Add to your favorites and create a playlist with your favorites. You can use the massage timer from the playlist page, it will automatically be set depending on how long each technique is. Stay tuned for updates.
 
 ## Authors
 
@@ -30,24 +33,78 @@ Instructions go here..
 ##### Technologies used:
 
 - [Python](https://www.python.org) - Language
-- [Django](https://www.djangoproject.com) - The web framework used
+- [Django](https://www.djangoproject.com) - Web framework
 - [Heroku](https://www.heroku.com) - Deployment
-- [Bootstrap](https://getbootstrap.com) - Styling
 - [Bootstrap](https://getbootstrap.com) - Styling
 
 ## User Stories
 
-##### Home Page
+##### Sprint 1: Basic Auth & Profiles
 
-##### Profile Page
+- Basic splash page
 
-##### About Page
+  - Login
+  - Register
+
+- Profile page - photo default - edit profile - list of playlists
+- Navbar - Login or Logout - Massage index
+- Seed data - massage techniques - playlists
+- Index of favorite massage techniques
+- Massage technique details page
+
+##### Sprint 2: Techniques CRUD
+
+- User can delete massage techniques from their favorites
+- User can add massage techniques to favorites from the massage techniques index - Stretch: or from other user’s profiles/playlists
+
+##### Sprint 3: Playlists
+
+- User can create a massage playlist that saves to their profile - playlist adds techniques from the favorites index or global index
+- User can edit a playlist - name, picture, add/delete techniques, adjust time
+- Admin can edit or add new techniques to global index - Stretch: Users can submit a technique, but must it be approved before adding it to the global index?
+
+##### Sprint 4: Playlist modes
+
+- Add different playlist modes: - Self massage - interval timing for full day use - Partner massage - timer for continuous amount
 
 ## Wireframes
 
+##### Profile Page
+
+<img src="main_app/static/images/profile.png" width="200" height="200">
+
+##### Playlist Page
+
+<img src="main_app/static/images/playlist_view.png" width="200" height="200">
+
+##### Create Playlist Page
+
+<img src="main_app/static/images/playlist_create.png" width="200" height="200">
+
+##### Technique Index Page
+
+<img src="main_app/static/images/tech_index.png" width="200" height="200">
+
+##### Technique Detail Page
+
+<img src="main_app/static/images/technique_detail.png" width="200" height="200">
+
 ## Data Models
 
+<img src="main_app/static/images/Datamodels.png" width="200" height="200">
+
 ## Future Updates
+
+- Edit profile
+- Timer settings: User will be able to customize time intervals with alerts
+- Add Spotify playlist API
+- Mobile app version
+- View other user's playlist and add them to your own profile
+- Follow other users
+- Submit techniques to the community
+- Various styling changes
+  - Techniques in global database will display message that you've added them.
+  -
 
 ## References
 
