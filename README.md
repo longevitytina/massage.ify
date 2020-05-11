@@ -71,11 +71,11 @@ Create a profile, start browsing the index of techniques. Add to your favorites 
 
 ##### Profile Page
 
-<img src="main_app/static/images/profile.png" width="200" height="200">
+<img src="/main_app/static/images/profile.png" width="200" height="200">
 
 ##### Playlist Page
 
-<img src="main_app/static/images/playlist_view.png" width="200" height="200">
+<img src="/main_app/static/images/playlist_view.png" width="200" height="200">
 
 ##### Create Playlist Page
 
@@ -108,19 +108,19 @@ Create a profile, start browsing the index of techniques. Add to your favorites 
 
 ## References
 
-[Django admin panel customization](https://data-flair.training/blogs/django-admin-customization/)
-[Datamodel builder](https://www.lucidchart.com/)
-[Create super user in script](https://stackoverflow.com/questions/6244382/how-to-automate-createsuperuser-on-django)
-[Split models.py into several files](https://stackoverflow.com/questions/6336664/split-models-py-into-several-files)
-[Extra fields on many-to-many relationships](https://docs.djangoproject.com/en/dev/topics/db/models/#extra-fields-on-many-to-many-relationships)
-[Random pic generator](https://source.unsplash.com/)
-[ManyToMany convert queryset iteration ](https://stackoverflow.com/questions/45768190/typeerror-manyrelatedmanager-object-is-not-iterable)
-[is_authenticated](https://docs.djangoproject.com/en/2.0/topics/auth/default/#limiting-access-to-logged-in-users)
+- [Django admin panel customization](https://data-flair.training/blogs/django-admin-customization/)
+- [Datamodel builder](https://www.lucidchart.com/)
+- [Create super user in script](https://stackoverflow.com/questions/6244382/how-to-automate-createsuperuser-on-django)
+- [Split models.py into several files](https://stackoverflow.com/questions/6336664/split-models-py-into-several-files)
+- [Extra fields on many-to-many relationships](https://docs.djangoproject.com/en/dev/topics/db/models/#extra-fields-on-many-to-many-relationships)
+- [Random pic generator](https://source.unsplash.com/)
+- [ManyToMany convert queryset iteration ](https://stackoverflow.com/questions/45768190/typeerror-manyrelatedmanager-object-is-not-iterable)
+- [is_authenticated](https://docs.djangoproject.com/en/2.0/topics/auth/default/#limiting-access-to-logged-in-users)
 
-[Bootstrap profile page starter](https://bootstrapious.com/p/bootstrap-profile-page)
-[Sortable list library](https://github.com/SortableJS/Sortable)
-[Collectstatic error](https://stackoverflow.com/questions/36665889/collectstatic-error-while-deploying-django-app-to-heroku)
-[Display Timer](https://www.freecodecamp.org/forum/t/return-in-setinterval/186389/8)
+- [Bootstrap profile page starter](https://bootstrapious.com/p/bootstrap-profile-page)
+- [Sortable list library](https://github.com/SortableJS/Sortable)
+- [Collectstatic error](https://stackoverflow.com/questions/36665889/collectstatic-error-while-deploying-django-app-to-heroku)
+- [Display Timer](https://www.freecodecamp.org/forum/t/return-in-setinterval/186389/8)
 
-[Align buttons](https://stackoverflow.com/questions/20962483/how-do-i-make-two-bootstrap-buttons-side-by-side/20962556)
-[Modeling playlists](https://stackoverflow.com/questions/4799378/best-way-to-make-a-simple-orderable-playlist-in-django)
+- [Align buttons](https://stackoverflow.com/questions/20962483/how-do-i-make-two-bootstrap-buttons-side-by-side/20962556)
+- [Modeling playlists](https://stackoverflow.com/questions/4799378/best-way-to-make-a-simple-orderable-playlist-in-django)
