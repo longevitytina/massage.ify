@@ -106,6 +106,10 @@ Create a profile, start browsing the index of techniques. Add to your favorites 
 ##### Features
 
 - Edit profile
+- Instructions
+- Various styling changes
+  - Techniques in global database will display message that you've added them.
+  - More transitions and icons
 - Timer settings: User will be able to customize time intervals with alerts
 - Submit techniques to the community
   - Users can upload photos and videos
@@ -113,9 +117,6 @@ Create a profile, start browsing the index of techniques. Add to your favorites 
       - Connect IG, tiktok, etc..
 - View other user's playlist and add them to your own profile
 - Follow other users
-- Various styling changes
-  - Techniques in global database will display message that you've added them.
-  - More transitions and icons
 - Find massage therapist/trainers in your area
   - connect an external search api like yelp, nextdoor
   - Provide a site index of therapist in the website community
